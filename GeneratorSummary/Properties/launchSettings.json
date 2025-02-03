@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "GeneratorSummary": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7116"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 34980,
+      "useSSL": false
+    }
+  }
+}
