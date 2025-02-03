@@ -226,7 +226,7 @@ namespace GeneratorSummary.Application.Services.GeneratorSummaryService
                 Directory.CreateDirectory(destinationFolder);
             }
 
-            File.Move(sourceFile, Path.Combine(destinationFolder, Path.GetFileName(sourceFile)));
+            File.Move(sourceFile, Path.Combine(destinationFolder, Path.GetFileName(sourceFile)), true);
         }
 
         private void GenerateOutputXmlFile(
@@ -249,6 +249,11 @@ namespace GeneratorSummary.Application.Services.GeneratorSummaryService
                     root.SetAttribute("xmlns:xsi", XmlConstants.HeaderXsiUrl);
                     root.SetAttribute("xmlns:xsd", XmlConstants.HeaderXsdUrl);
                 }
+            }
+
+            if (File.Exists(outputFileName))
+            {
+                File.Delete(outputFileName);
             }
             xmlDocument?.Save(outputFileName);
         }

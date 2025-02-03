@@ -8,6 +8,6 @@ namespace GeneratorSummary.Application.Constants
 {
     public static class CronExpressionConstants
     {
-        public const string GeneratorSummaryCron = "0 */2 * * * *";
+        public const string GeneratorSummaryCron = "0 */1 * * * *";
     }
 }
